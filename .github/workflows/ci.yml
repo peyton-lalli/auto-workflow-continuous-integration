@@ -28,5 +28,8 @@ jobs:
         run: |
             npm install remark-cli remark-preset-lint-consistent
             npx remark . --use remark-preset-link-consistent --frail
-
+      - uses: actions/upload-artifact@main
+        with:
+          name: remark-lint-report
+          path: public/
 
